@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: fernuni_backend
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    environment:
+      - DATA_DIR=/data
+      - TEMP_DIR=/tmp
+    ports:
+      - "8000:8000"
+    networks:
+      - fernuni_net
+
+  frontend:
+    build: ./frontend
+    container_name: fernuni_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - fernuni_net
+
+networks:
+  fernuni_net:
+    driver: bridge
