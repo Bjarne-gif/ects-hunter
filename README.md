@@ -1,5 +1,7 @@
 # FernUni Hagen — Modul- & Notentracker
 
+**Achtung Tool wird entwickelt und könnte verbuggt sein.
+
 **Inoffizieller akademischer Tracker für den BSc Wirtschaftsinformatik**  
 FernUniversität in Hagen · PO 18. Änderung (wirksam ab 01.10.2025)
 
